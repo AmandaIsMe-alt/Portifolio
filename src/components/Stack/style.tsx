@@ -51,5 +51,9 @@ export const StackCard = styled("div", {
       transform: "translateY(-140%)",
       animation: `${scaleUp} 200ms`,
     },
+
+    "svg": {
+      fill: "$brand1",
+    }
   },
 });

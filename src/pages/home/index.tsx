@@ -7,6 +7,7 @@ import { Button } from "@/styles/Buttons";
 import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
 import { Contacts } from "@/components/Contacts";
+import { About } from "@/components/About";
 
 // Data
 import { stackData } from "@/utils/stackData";
@@ -36,16 +37,15 @@ export const Home = (): JSX.Element => {
       <Header>
         <Container>
           <HeaderContent>
-            <Flex>
               <UserImage
                 src={`https://github.com/${userData.githubUser}.png`}
                 alt={userData.nameUser}
                 title={userData.nameUser}
-                width={"48px"}
-                height={"48px"}
+                width={"80px"}
+                height={"80px"}
+                style={{margin: "0 0 0 85px"}}
               />
-              <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
-            </Flex>
+            <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
             <Text as="h1" type="heading1" color="grey5">
             I{" "}
               <Text as="span" type="heading1" color="brand1">
@@ -87,6 +87,7 @@ export const Home = (): JSX.Element => {
           </HeaderContent>
         </Container>
       </Header>
+      <About/>
       <ProjectsArea id="projects">
         <Container>
           <ProjectAreaWrapperColumns>
